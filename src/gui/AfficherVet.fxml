@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" cache="true" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.AfficherVetController">
+   <children>
+      <Label layoutX="74.0" layoutY="52.0" text="Id" />
+      <Label layoutX="74.0" layoutY="111.0" text="Nom" />
+      <Label layoutX="74.0" layoutY="167.0" text="Prénom" />
+      <Label layoutX="74.0" layoutY="226.0" text="Email" />
+      <Label layoutX="74.0" layoutY="285.0" text="Adresse" />
+      <Label layoutX="74.0" layoutY="344.0" text="Date de mise en service" />
+      <TextField fx:id="txtId" editable="false" layoutX="251.0" layoutY="52.0" prefHeight="26.0" prefWidth="204.0" />
+      <TextField fx:id="txtNom" editable="false" layoutX="251.0" layoutY="111.0" prefHeight="26.0" prefWidth="204.0" />
+      <TextField fx:id="txtPrenom" editable="false" layoutX="251.0" layoutY="167.0" prefHeight="26.0" prefWidth="204.0" />
+      <TextField fx:id="txtEmail" editable="false" layoutX="251.0" layoutY="226.0" prefHeight="26.0" prefWidth="204.0" />
+      <TextField fx:id="txtAdress" editable="false" layoutX="253.0" layoutY="285.0" prefHeight="26.0" prefWidth="204.0" />
+      <TextField fx:id="txtDate" editable="false" layoutX="251.0" layoutY="343.0" prefHeight="26.0" prefWidth="204.0" />
+   </children>
+</AnchorPane>

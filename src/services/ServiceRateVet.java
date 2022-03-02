@@ -100,9 +100,9 @@ public class ServiceRateVet {
                            
                        }
                        
-                        map.entrySet().stream().map((t) -> {
+                        map.entrySet().stream().map((t) -> { //att c,v
                                 
-                             double a = t.getValue().stream().map(m->m.getRateValue()).reduce(0,(e, u) -> {
+                             double a = t.getValue().stream().map(m->m.getRateValue()).reduce(0,(e, u) -> {   //tlem
                                    
                                    return (e+u); //To change body of generated lambdas, choose Tools | Templates.
                                });
@@ -123,7 +123,7 @@ public class ServiceRateVet {
                    return p;
            
        }
-       public HashMap<Veterinaire,Double> getMostRatedDressers(){
+       public HashMap<Veterinaire,Double> getMostRatedVet(){
             HashMap<Veterinaire,Double> rate = afficherRateVet();
             HashMap<Veterinaire,Double> finalMap = new HashMap<>();
             rate.entrySet().stream().sorted((o1, o2) -> {

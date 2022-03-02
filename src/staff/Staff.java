@@ -10,6 +10,7 @@ import entity.Dresseur;
 import entity.RateVet;
 import entity.User;
 import entity.Veterinaire;
+import java.io.IOException;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -18,6 +19,16 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import javafx.application.Application;
+import static javafx.application.Application.launch;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 import services.ServiceDresseur;
 import services.ServiceRateVet;
 import services.ServiceVeterinaire;
@@ -26,11 +37,35 @@ import services.ServiceVeterinaire;
  *
  * @author sadok
  */
-public class Staff {
+public class Staff extends Application{
 
    
-    public static void main(String[] args) throws SQLException  {
-        int connectedUser  = 1;
+    @Override
+    public void start(Stage primaryStage) {
+         try {
+            Parent root = FXMLLoader.load(getClass().getResource("AjouterVet.fxml"));
+                    
+                    Scene scene = new Scene(root);
+                    
+                    primaryStage.setTitle("Ajouter un véterinaire");
+                    primaryStage.setScene(scene);
+                    primaryStage.show();
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());;
+        }
+    }
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+
+
+
+//int connectedUser  = 1;
       
      
         /*while(true){
@@ -133,15 +168,19 @@ public class Staff {
 //        String email="a@esprit";
 //        Matcher matcher = pattern.matcher(email);
 //
-//            System.out.println(matcher.matches());
-ServiceRateVet sr = new ServiceRateVet();
-           Veterinaire vet = new Veterinaire(5, "test", "test", "test", "test", "test");
-           User user = new User(connectedUser, "test", "test");
-           RateVet rate = new RateVet(0, 0, user, vet);
-sr.ajouterRateVet(rate);
-            System.out.println(sr.afficherRateVet());
     
-    }
+    
+    
+    
+//            System.out.println(matcher.matches());
+//ServiceRateVet sr = new ServiceRateVet();
+//           Veterinaire vet = new Veterinaire(5, "test", "test", "test", "test", "test");
+//           User user = new User(connectedUser, "test", "test");
+//           RateVet rate = new RateVet(0, 0, user, vet);
+//sr.ajouterRateVet(rate);
+//            System.out.println(sr.afficherRateVet());
+    
+    
 
 
 
